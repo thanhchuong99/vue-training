@@ -1,0 +1,13 @@
+.app-container {
+  min-height: 100vh;
+}
+
+.btn-delete-user {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
