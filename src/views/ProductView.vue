@@ -60,7 +60,6 @@ const tableData = reactive<PageTable<Product>>({
   total: 0
 })
 const PAGE_SIZE = 5
-const tableHeight = ref(0)
 const dialogVisible = ref(false)
 const form = reactive<Product>({
   id: '',
@@ -82,8 +81,6 @@ const title = computed<string>(() => {
 
 const responsive = () => {
   layout.value = document.body.clientWidth < 768 ? 'prev, pager, next' : undefined
-  // const el = document.getElementById('searchForm') as HTMLElement
-  // tableHeight.value = document.body.clientHeight - el.clientHeight - 140
 }
 
 onMounted(() => {
