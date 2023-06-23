@@ -11,6 +11,9 @@ service.interceptors.request.use(
     if (['post', 'put'].includes(method) && config.headers) {
       config.headers['Content-Type'] = 'application/json'
     }
+    config.headers['Access-Control-Allow-Origin'] = '*'
+    config.headers['ngrok-skip-browser-warning'] = true
+
     return config
   },
   (error) => {
@@ -45,6 +48,7 @@ service.interceptors.response.use(
         total: parseInt(count)
       }
     }
+
     return data
   },
   (error) => {
